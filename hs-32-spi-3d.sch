@@ -2775,6 +2775,9 @@ DIN A3, landscape with location and doc. field</description>
 <part name="U$3" library="jonnew" deviceset="+2V5" device=""/>
 <part name="U$4" library="jonnew" deviceset="+2V5" device=""/>
 <part name="FRAME2" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="A3L-LOC" device=""/>
+<part name="P+9" library="supply1" deviceset="VCC" device=""/>
+<part name="P+11" library="supply1" deviceset="VCC" device=""/>
+<part name="AUX3" library="RHD2000_eval_board" deviceset="TESTPOINT" device="_SMALL"/>
 </parts>
 <sheets>
 <sheet>
@@ -2962,6 +2965,15 @@ DIN A3, landscape with location and doc. field</description>
 <attribute name="DRAWING_NAME" x="344.17" y="15.24" size="2.54" layer="94"/>
 <attribute name="LAST_DATE_TIME" x="344.17" y="10.16" size="2.286" layer="94"/>
 <attribute name="SHEET" x="357.505" y="5.08" size="2.54" layer="94"/>
+</instance>
+<instance part="P+9" gate="VCC" x="55.88" y="132.08" smashed="yes">
+<attribute name="VALUE" x="53.34" y="129.54" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="P+11" gate="VCC" x="55.88" y="149.86" smashed="yes">
+<attribute name="VALUE" x="53.34" y="147.32" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="AUX3" gate="TP$1" x="40.64" y="132.08" smashed="yes">
+<attribute name="NAME" x="40.894" y="126.365" size="1.778" layer="95"/>
 </instance>
 </instances>
 <busses>
@@ -3382,6 +3394,21 @@ DIN A3, landscape with location and doc. field</description>
 <pinref part="C7" gate="C" pin="1"/>
 <pinref part="P+8" gate="VCC" pin="VCC"/>
 </segment>
+<segment>
+<pinref part="U1" gate="A" pin="AUXIN2"/>
+<wire x1="76.2" y1="132.08" x2="76.2" y2="127" width="0.1524" layer="91"/>
+<wire x1="76.2" y1="127" x2="55.88" y2="127" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="127" x2="55.88" y2="129.54" width="0.1524" layer="91"/>
+<pinref part="P+9" gate="VCC" pin="VCC"/>
+</segment>
+<segment>
+<pinref part="U1" gate="A" pin="AUXIN1"/>
+<wire x1="55.88" y1="147.32" x2="55.88" y2="144.78" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="144.78" x2="66.04" y2="144.78" width="0.1524" layer="91"/>
+<wire x1="66.04" y1="144.78" x2="66.04" y2="147.32" width="0.1524" layer="91"/>
+<wire x1="66.04" y1="147.32" x2="68.58" y2="147.32" width="0.1524" layer="91"/>
+<pinref part="P+11" gate="VCC" pin="VCC"/>
+</segment>
 </net>
 <net name="N$11" class="0">
 <segment>
@@ -3575,27 +3602,14 @@ DIN A3, landscape with location and doc. field</description>
 <wire x1="106.68" y1="231.14" x2="106.68" y2="215.9" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="XOUT" class="0">
-<segment>
-<pinref part="U1" gate="A" pin="AUXIN1"/>
-<wire x1="55.88" y1="147.32" x2="68.58" y2="147.32" width="0.1524" layer="91"/>
-<label x="55.88" y="147.32" size="1.778" layer="95" rot="R180"/>
-</segment>
-</net>
-<net name="YOUT" class="0">
-<segment>
-<pinref part="U1" gate="A" pin="AUXIN2"/>
-<wire x1="76.2" y1="132.08" x2="76.2" y2="129.54" width="0.1524" layer="91"/>
-<wire x1="76.2" y1="129.54" x2="55.88" y2="129.54" width="0.1524" layer="91"/>
-<label x="55.88" y="129.54" size="1.778" layer="95" rot="R180"/>
-</segment>
-</net>
-<net name="ZOUT" class="0">
+<net name="AUXIN3" class="0">
 <segment>
 <pinref part="U1" gate="A" pin="AUXIN3"/>
-<wire x1="55.88" y1="121.92" x2="78.74" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="40.64" y1="121.92" x2="78.74" y2="121.92" width="0.1524" layer="91"/>
 <wire x1="78.74" y1="121.92" x2="78.74" y2="132.08" width="0.1524" layer="91"/>
-<label x="55.88" y="121.92" size="1.778" layer="95" rot="R180"/>
+<label x="55.88" y="124.46" size="1.778" layer="95" rot="R180"/>
+<pinref part="AUX3" gate="TP$1" pin="1"/>
+<wire x1="40.64" y1="121.92" x2="40.64" y2="124.46" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="BNO_SCL" class="0">
