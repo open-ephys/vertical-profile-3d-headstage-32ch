@@ -986,7 +986,7 @@
 <element name="REF" library="RHD2000_eval_board" package="TESTPOINT_SMALL" value="TESTPOINT_SMALL" x="13.6525" y="16.8275" smashed="yes" rot="R90">
 <attribute name="NAME" x="14.9479" y="17.4752" size="0.8128" layer="25" font="vector" ratio="18" rot="R90"/>
 </element>
-<element name="C6" library="jonnew" package="0402" value="1u" x="13.081" y="6.2865" smashed="yes">
+<element name="C6" library="jonnew" package="0402" value="4.7u" x="13.081" y="6.2865" smashed="yes">
 <attribute name="NAME" x="15.0495" y="5.4102" size="0.8128" layer="25" font="vector" ratio="18" rot="R90"/>
 <attribute name="VALUE" x="11.811" y="4.5085" size="1.016" layer="27" font="vector" ratio="18"/>
 </element>
@@ -1005,7 +1005,7 @@
 <element name="U3" library="jonnew" package="X2SON" value="TLV70725" x="4.2164" y="1.0922" smashed="yes">
 <attribute name="NAME" x="3.745" y="0.7362" size="0.6096" layer="25" font="vector" ratio="18"/>
 </element>
-<element name="C7" library="jonnew" package="0402T" value="1uF" x="5.6134" y="1.2192" smashed="yes" rot="R90">
+<element name="C7" library="jonnew" package="0402T" value="4.7uF" x="5.6134" y="1.2192" smashed="yes" rot="R90">
 <attribute name="NAME" x="5.9952" y="0.3572" size="0.8128" layer="25" font="vector" ratio="18"/>
 <attribute name="PARTNO" value="CL05A105KO5NNNC" x="14.5034" y="-3.5433" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="VALUE" x="7.1914" y="-0.0508" size="1.016" layer="27" font="vector" ratio="18" rot="R90"/>
