@@ -67,6 +67,8 @@
 <layer number="57" name="tCAD" color="7" fill="1" visible="no" active="no"/>
 <layer number="59" name="tCarbon" color="7" fill="1" visible="no" active="no"/>
 <layer number="60" name="bCarbon" color="7" fill="1" visible="no" active="no"/>
+<layer number="88" name="SimResults" color="9" fill="1" visible="yes" active="yes"/>
+<layer number="89" name="SimProbes" color="9" fill="1" visible="yes" active="yes"/>
 <layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
@@ -2699,6 +2701,65 @@ DIN A3, landscape with location and doc. field</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="24CW640T-I_CS0668">
+<packages>
+<package name="4-BALL_WAFFER_0.4MMX0.4MM" urn="urn:adsk.eagle:footprint:5738934/1" locally_modified="yes">
+<description>4-BGA, 0.40 mm pitch, 0.85mm X 0.85mm body</description>
+<smd name="A1" x="0" y="0" dx="0.163" dy="0.163" layer="1" roundness="100" stop="no" thermals="no"/>
+<smd name="A2" x="0.4" y="0" dx="0.163" dy="0.163" layer="1" roundness="100" stop="no" thermals="no"/>
+<smd name="B1" x="0" y="-0.4" dx="0.163" dy="0.163" layer="1" roundness="100" stop="no" thermals="no"/>
+<smd name="B2" x="0.4" y="-0.4" dx="0.163" dy="0.163" layer="1" roundness="100" stop="no" thermals="no"/>
+<text x="0.93" y="0.805" size="1.27" layer="25" align="bottom-center">&gt;NAME</text>
+<text x="0.9" y="-1.005" size="1.27" layer="27" align="top-center">&gt;VALUE</text>
+<circle x="-0.4" y="0.3" radius="0.03" width="0.1" layer="21"/>
+<wire x1="0.65" y1="-0.65" x2="0.65" y2="-0.3" width="0.1" layer="21"/>
+<wire x1="0.65" y1="-0.65" x2="0.3" y2="-0.65" width="0.1" layer="21"/>
+<wire x1="0.65" y1="0.25" x2="0.3" y2="0.25" width="0.1" layer="21"/>
+<wire x1="0.65" y1="0.25" x2="0.65" y2="-0.1" width="0.1" layer="21"/>
+<wire x1="-0.25" y1="0.25" x2="-0.25" y2="-0.1" width="0.1" layer="21"/>
+<wire x1="-0.25" y1="0.25" x2="0.1" y2="0.25" width="0.1" layer="21"/>
+<wire x1="-0.25" y1="-0.65" x2="0.1" y2="-0.65" width="0.1" layer="21"/>
+<wire x1="-0.25" y1="-0.65" x2="-0.25" y2="-0.3" width="0.1" layer="21"/>
+<circle x="0.4" y="0" radius="0.04" width="0.1" layer="29"/>
+<circle x="0" y="0" radius="0.04" width="0.1" layer="29"/>
+<circle x="0" y="-0.4" radius="0.04" width="0.1" layer="29"/>
+<circle x="0.4" y="-0.4" radius="0.04" width="0.1" layer="29"/>
+</package>
+</packages>
+<symbols>
+<symbol name="24CW640T-I/CS0668">
+<description>16K-128K I2C Serial EEPROM</description>
+<pin name="SCL" x="-10.16" y="5.08" length="short"/>
+<pin name="SDA" x="-10.16" y="-2.54" length="short"/>
+<pin name="GND" x="10.16" y="-5.08" length="short" rot="R180"/>
+<pin name="VCC" x="10.16" y="5.08" length="short" rot="R180"/>
+<wire x1="-7.62" y1="7.62" x2="-7.62" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-7.62" x2="7.62" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-7.62" x2="7.62" y2="7.62" width="0.254" layer="94"/>
+<wire x1="7.62" y1="7.62" x2="-7.62" y2="7.62" width="0.254" layer="94"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="24CW640T-I/CS0668">
+<gates>
+<gate name="G$1" symbol="24CW640T-I/CS0668" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="4-BALL_WAFFER_0.4MMX0.4MM">
+<connects>
+<connect gate="G$1" pin="GND" pad="A2"/>
+<connect gate="G$1" pin="SCL" pad="B1"/>
+<connect gate="G$1" pin="SDA" pad="B2"/>
+<connect gate="G$1" pin="VCC" pad="A1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -2778,6 +2839,9 @@ DIN A3, landscape with location and doc. field</description>
 <part name="P+9" library="supply1" deviceset="VCC" device=""/>
 <part name="P+11" library="supply1" deviceset="VCC" device=""/>
 <part name="AUX3" library="RHD2000_eval_board" deviceset="TESTPOINT" device="_SMALL"/>
+<part name="U4" library="24CW640T-I_CS0668" deviceset="24CW640T-I/CS0668" device=""/>
+<part name="GND16" library="supply1" deviceset="GND" device=""/>
+<part name="U$7" library="jonnew" deviceset="+2V5" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -2975,6 +3039,11 @@ DIN A3, landscape with location and doc. field</description>
 <instance part="AUX3" gate="TP$1" x="40.64" y="132.08" smashed="yes">
 <attribute name="NAME" x="40.894" y="126.365" size="1.778" layer="95"/>
 </instance>
+<instance part="U4" gate="G$1" x="337.82" y="175.26" smashed="yes"/>
+<instance part="GND16" gate="1" x="353.06" y="154.94" smashed="yes">
+<attribute name="VALUE" x="350.52" y="152.4" size="1.778" layer="96"/>
+</instance>
+<instance part="U$7" gate="G$1" x="353.06" y="193.04" smashed="yes"/>
 </instances>
 <busses>
 </busses>
@@ -3336,6 +3405,12 @@ DIN A3, landscape with location and doc. field</description>
 <pinref part="C8" gate="C" pin="2"/>
 <pinref part="GND15" gate="1" pin="GND"/>
 </segment>
+<segment>
+<pinref part="U4" gate="G$1" pin="GND"/>
+<wire x1="347.98" y1="170.18" x2="353.06" y2="170.18" width="0.1524" layer="91"/>
+<pinref part="GND16" gate="1" pin="GND"/>
+<wire x1="353.06" y1="170.18" x2="353.06" y2="157.48" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="VCC" class="0">
 <segment>
@@ -3617,6 +3692,7 @@ DIN A3, landscape with location and doc. field</description>
 <wire x1="292.1" y1="99.06" x2="284.48" y2="99.06" width="0.1524" layer="91"/>
 <label x="284.48" y="99.06" size="1.27" layer="95" rot="R180" xref="yes"/>
 <pinref part="U2" gate="G$1" pin="COM1/SCL/RX"/>
+<label x="325.12" y="180.34" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <wire x1="149.86" y1="78.74" x2="152.4" y2="78.74" width="0.1524" layer="91"/>
@@ -3631,12 +3707,17 @@ DIN A3, landscape with location and doc. field</description>
 <wire x1="129.54" y1="60.96" x2="109.22" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="109.22" y1="60.96" x2="109.22" y2="43.18" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="U4" gate="G$1" pin="SCL"/>
+<wire x1="327.66" y1="180.34" x2="325.12" y2="180.34" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="BNO_SDA" class="0">
 <segment>
 <wire x1="292.1" y1="96.52" x2="284.48" y2="96.52" width="0.1524" layer="91"/>
 <label x="284.48" y="96.52" size="1.27" layer="95" rot="R180" xref="yes"/>
 <pinref part="U2" gate="G$1" pin="COM0/SDA/TX"/>
+<label x="325.12" y="172.72" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <wire x1="139.7" y1="78.74" x2="137.16" y2="78.74" width="0.1524" layer="91"/>
@@ -3650,6 +3731,10 @@ DIN A3, landscape with location and doc. field</description>
 <pinref part="S2" gate="A" pin="MISO2-"/>
 <wire x1="127" y1="63.5" x2="106.68" y2="63.5" width="0.1524" layer="91"/>
 <wire x1="106.68" y1="63.5" x2="106.68" y2="43.18" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U4" gate="G$1" pin="SDA"/>
+<wire x1="327.66" y1="172.72" x2="325.12" y2="172.72" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$67" class="0">
@@ -3710,6 +3795,12 @@ DIN A3, landscape with location and doc. field</description>
 <pinref part="U$4" gate="G$1" pin="+2V5"/>
 <pinref part="R5" gate="R" pin="1"/>
 <wire x1="149.86" y1="93.98" x2="149.86" y2="91.44" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U4" gate="G$1" pin="VCC"/>
+<wire x1="347.98" y1="180.34" x2="353.06" y2="180.34" width="0.1524" layer="91"/>
+<pinref part="U$7" gate="G$1" pin="+2V5"/>
+<wire x1="353.06" y1="180.34" x2="353.06" y2="193.04" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
