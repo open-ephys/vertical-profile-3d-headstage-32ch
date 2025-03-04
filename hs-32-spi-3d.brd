@@ -2283,19 +2283,19 @@
 <element name="REF" library="RHD2000_eval_board" package="TESTPOINT_SMALL" value="TESTPOINT_SMALL" x="13.6525" y="16.8275" smashed="yes" rot="R90">
 <attribute name="NAME" x="14.9479" y="17.4752" size="0.8128" layer="25" font="vector" ratio="18" rot="R90"/>
 </element>
-<element name="C6" library="jonnew" package="0402" value="4.7u" x="13.081" y="6.2865" smashed="yes">
+<element name="C6" library="jonnew" package="0402" value="4.7uF" x="13.081" y="6.2865" smashed="yes">
 <attribute name="NAME" x="15.0495" y="5.4102" size="0.8128" layer="25" font="vector" ratio="18" rot="R90"/>
 <attribute name="VALUE" x="11.811" y="4.5085" size="1.016" layer="27" font="vector" ratio="18"/>
 </element>
-<element name="C4" library="jonnew" package="0402T" value="0.1uF" x="0.7112" y="4.1275" smashed="yes" rot="R90">
+<element name="C4" library="jonnew" package="0402T" value="100nF" x="0.7112" y="4.1275" smashed="yes" rot="R90">
 <attribute name="NAME" x="1.0652" y="5.0935" size="0.8128" layer="25" font="vector" ratio="18" rot="R90"/>
 <attribute name="VALUE" x="2.2892" y="2.8575" size="1.016" layer="27" font="vector" ratio="18" rot="R90"/>
 </element>
-<element name="C3" library="jonnew" package="0402T" value="0.1uF" x="4.1275" y="2.286" smashed="yes">
+<element name="C3" library="jonnew" package="0402T" value="100nF" x="4.1275" y="2.286" smashed="yes">
 <attribute name="NAME" x="2.3122" y="2.059" size="0.6096" layer="25" font="vector" ratio="18"/>
 <attribute name="VALUE" x="2.8575" y="0.708" size="1.016" layer="27" font="vector" ratio="18"/>
 </element>
-<element name="C5" library="jonnew" package="0201T" value="0.1uF" x="5.5372" y="4.3942" smashed="yes" rot="R90">
+<element name="C5" library="jonnew" package="0201T" value="100nF" x="5.5372" y="4.3942" smashed="yes" rot="R90">
 <attribute name="NAME" x="5.969" y="4.9784" size="0.8128" layer="25" font="vector" ratio="18" rot="R90"/>
 <attribute name="VALUE" x="7.112" y="3.2004" size="1.016" layer="27" font="vector" ratio="18" rot="R90"/>
 </element>

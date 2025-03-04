@@ -2807,10 +2807,10 @@ DIN A3, landscape with location and doc. field</description>
 <part name="P+1" library="supply1" deviceset="VCC" device=""/>
 <part name="GND10" library="supply1" deviceset="GND" device=""/>
 <part name="REF" library="RHD2000_eval_board" deviceset="TESTPOINT" device="_SMALL"/>
-<part name="C6" library="jonnew" deviceset="C" device="_0402" value="4.7u"/>
-<part name="C4" library="jonnew" deviceset="C" device="_0402T" value="0.1uF"/>
-<part name="C3" library="jonnew" deviceset="C" device="_0402T" value="0.1uF"/>
-<part name="C5" library="jonnew" deviceset="C" device="_0201T" value="0.1uF"/>
+<part name="C6" library="jonnew" deviceset="C" device="_0402" value="4.7uF"/>
+<part name="C4" library="jonnew" deviceset="C" device="_0402T" value="100nF"/>
+<part name="C3" library="jonnew" deviceset="C" device="_0402T" value="100nF"/>
+<part name="C5" library="jonnew" deviceset="C" device="_0201T" value="100nF"/>
 <part name="U3" library="jonnew" deviceset="TLV707" device="" value="TLV70725"/>
 <part name="U$45" library="jonnew" deviceset="+2V5" device=""/>
 <part name="C7" library="jonnew" deviceset="C" device="_0402T" value="4.7uF">
